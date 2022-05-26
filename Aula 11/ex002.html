@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+	<h1>Sistema de Multas</h1> <!-- <h1> coloca um título -->
+	Velocidade do carro: <input type='number' name='txtvel' id='txtvel'> Km/h
+	<!--
+Ao digitar "input:" no Visual Studio Code você terá um auxílio
+para setar um input de tipo number como está aparecendo acima.
+Esse input cria uma caixa para o cliente preenche-la com número
+	-->
+	<input type='button' value='Verificar' onclick='calcular()'>
+	<!--
+Note que ao digitar "input:" Você terá o mesmo auxílio que o 
+input anterior, todavia ele irá fechar em "value=''", então é
+necessário intervir colocando "onclick='calcular()'" que irá
+disparar o 'calcular()' ao clicar neste butão
+	-->
+	<div id='res'>
+
+	</div>
+	<script>
+		function calcular() { // Crio a função que ativa após o disparo do 'calcular()'
+            var txtv = document.querySelector('#txtvel') // Atrelo do que foi escrito na caixa do HTML para uma variável
+            var vel = Number(txtv.value) // Transformo a string da caixa em number através de 'Number'
+            var res = document.querySelector('#res') // Atrelo a div vazia para usar ela como canvas
+			res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}Km/h</strong></p>` // Uso a variável da div vasia para colocar um texto com a vel dentro
+			if (vel > 60) { // Crio a condição de vel > 60
+				res.innerHTML += `<p>Você está <strong>MULTADO</strong> por excesso de velocidade` // Se a condição for atendida altera o texto com um novo parágrafo
+			}
+			res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>` // Depois de checar a condição, adiciono um parágrafo independente
+		}
+	</script>
+</body>
+</html>

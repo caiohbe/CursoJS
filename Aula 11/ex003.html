@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiros</title>
+    <style>
+        body{ /* Escolho o body para ser alterado */
+            font: normal 18pt Arial; /* Coloco a fonte em Arial e em 18pt (tamanho), note que o "normal" é necessário */
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, qual é seu país de origem?</h1> <!-- Adiciono um título através de <h1> -->
+    <input type="text" name="txt" id="txt"> <!-- Adiciono uma caixa para ser preenchida com texto -->
+    <input type="button" value="Pronto" onclick="checar()"> <!-- Adiciono um butão escrito "Pronto", que ao clicar irá disparar "checar()" -->
+    <div id="res"> <!-- Adiciono uma div vazia para usar como canvas -->
+
+    </div>
+    <script>
+        function checar() { // Crio a função que irá atuar depois de receber "checar()"
+            var pais = document.querySelector('#txt').value // Crio uma variável "pais", que terá o valor do texto escrito na caixa HTML
+            var res = document.querySelector('#res') // Atrelo a div vazia a uma variável para usa-la como referência mais facilmente
+            if(pais == 'Brasil' || pais == 'brasil' || pais == 'Brazil' || pais == 'brazil') { // Crio diversas condições, apenas uma precisa ser atendida
+                res.innerHTML += '<p>Olá, é um prazer conhecer alguém da mesma nacionalidade!</p>' // Se a condição for atendida, adiciona um parágrafo a div
+            }else {
+                res.innerHTML += '<p>Olá, é um prazer conhecer alguém de outra nacionalidade!</p>' // Se a condição não for atendida, adiciona outro parágrafo a div
+            }
+        }
+    </script>
+</body>
+</html>

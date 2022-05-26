@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body {
+        background-color: blanchedalmond;
+        font:20px, Arial;
+      }
+    </style>
+</head>
+<body>
+   <script>
+        var nome = prompt('Qual é seu nome?') // Determina a variável "nome" através de um prompt
+        document.write(`Olá ${nome}, seu nome tem ${nome.length} letras.<br/>`) // Dirá quantas letras o nome tem e pula uma linha com <br/> (Break Rule)
+        document.write(`Seu nome em maíusculo é ${nome.toUpperCase()}</br>`) // Dirá como é seu nome em maíusculo e pula uma linha
+        document.write(`Seu nome em minúsculo é ${nome.toLowerCase()}`) // Dirá como é seu nome em minúsculo
+  </script>
+</body>
+</html>

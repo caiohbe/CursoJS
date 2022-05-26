@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title> 
+    <link rel="stylesheet" href="estilo.css">
+<!-- Ao digitar "link" é recomendado diversos tipos de link. Sendo um deles de css
+O link de css irá vincular um arquivo css externo à esse documento.html. -->
+</head> 
+<body> 
+    <header>
+        <h1>Verificador de Idade</h1> <!-- Título que ficará em cima da div-->
+    </header>
+    <section>
+        <div>
+            <p>Ano de nascimento: <!-- Cria um texto e uma caixa para inserir texto com o valor mínimo = 0--> 
+                <input type="text" name="nascimento" id="nascimento" min="0"></p>
+            <p>Sexo: 
+                <input type="radio" name="radsex" id="mas" checked> <!-- Cria uma caixa marcável que já vem marcada-->
+                <label for="mas">Maculino</label> <!-- Dá nome "Masculino" para a caixa já marcada-->
+                <input type="radio" name="radsex" id="fem"> <!-- Cria uma outra caixa marcável de mesmo nome da anterior-->
+                <label for="fem">Feminino</label> <!-- Dá nome "Feminino" para a outra caixa-->
+            </p>
+            <p><input type="button" value="Verificar" onclick="verificar()"></p> <!-- Cria um butão escrito "Verificar" que dispara para a função 'verificar()'-->
+                
+        </div>
+        <div id="res"> <!-- Cria div que será modificada com o resultado-->
+            Preencha os dados acima para ver o resultado! <!-- Conteúdo que será modificado-->
+        </div>
+    </section>
+    <footer> <!-- <footer> é o rodapé, como o nome sugere-->
+        <p>&copy; Caio Cascardo</p> <!-- o "&copy;" cria a caractere de copyright, <p> cria um parágrafo.-->
+    </footer>
+    <script src="script.js"></script> <!-- Ao digitar "script" é recomendado o "script:src", que irá 
+    assim como o link, adicionar uma página própria do javascript para ser alterada separadamente-->
+</body>
+</html>

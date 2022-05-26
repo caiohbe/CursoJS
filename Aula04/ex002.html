@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invader SL Range Calculator</title>
+    <style>
+        body {
+            background-color: rgb(216, 172, 135);
+            font: 20pt Arial;
+            color: black; 
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var SL = prompt('Qual é o seu Soul Level?') // Cria a variável "SL" através de um prompt
+        var InvSLmax = Number.parseInt(SL) + 20 + (Number.parseInt(SL) * 0.1)  // Determina a variável "InvSLmax" em função do number de "SL" dado.
+        var InvSLmin = SL - (SL * 0.1) // Determina a variável "InvSLmin" em função do "SL" dado.
+        alert(`O maior Soul Level que você consegue invadir é ${InvSLmax} e o menor Soul Level que você consegue invadir é ${InvSLmin}!`)
+        if(InvSLmin <= 125) {
+            document.write('Filthy twinker')
+        }
+    </script>
+</body>
+</html>

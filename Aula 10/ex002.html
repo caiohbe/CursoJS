@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+		body {
+			font: normal 18pt Arial; /* Altera a fonte */
+		}
+		input {
+			font: normal 18 pt Arial; /* Altera a fonte */
+			width: 100px; /* Altera a largura da caixa 'input' */
+		}
+		div#res {
+			margin-top: 20px; /* Cria uma margem de 20 pixeis pra div */
+		}
+	</style>
+</head>
+<body>
+	<h1>Somando Valores</h1> <!-- Entre <h1> recebe características de título -->
+	<input type='number' name='txtn1' id='txtn1'> <!-- Cria uma caixa para serem colocados números que terão ID 'txtn1' (name não é útil no exemplo) -->
+	<input type='number' name='txtn2' id='txtn2'> <!-- Cria outra caixa para serem colocados números que terão ID 'txtn2' (name não é útil no exemplo) -->
+	<input type='button' value='Somar' onclick='somar()'> <!-- Cria um butão escrito somar, que ao clicar emite 'somar()' -->
+	<div id='res'>Resultado</div> <!-- Crio uma div que se tornará o resultado -->
+	<script>
+		function somar() {
+			var sn1 = document.querySelector('#txtn1') // Cria a variável sn1 que recebe a string do número 1
+			var sn2 = document.querySelector('#txtn2') // Cria a variável sn2 que recebe a string do número 2
+			var res = document.querySelector('#res') // Cria a variável 'res' que será o resultado final na div
+			var n1 = Number(sn1.value) // Transforma a string de sn1 em número propriamente dito
+			var n2 = Number(sn2.value) // Transforma a string de sn2 em número propriamente dito
+			var s = n1 + n2 // Faz a soma desses números
+			res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>` // Altera o HTML da div pra um texto do resultado e explicita-o em negrito
+		}
+	</script>
+</body>

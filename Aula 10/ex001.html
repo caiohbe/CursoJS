@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div e funções</title>
+    <style>
+        div#area {
+            font: normal 20pt Arial; /* Torna a fonte ligeiramente maior em Arial */
+            background-color: rgb(74, 180, 74); /* Torna a cor de fundo em verde */
+            color: yellow; /* Torna a cor das letras em amarelo */
+            width: 200px; /* Delimita a área ocupada pela div */
+            height: 200px; /* Delimita a área ocupada pela div */
+            line-height: 200px; /* Ajusta onde o texto se encontrará na div verticalmente */
+            text-align: center; /* Ajusta o texto no centro horizontalmente */
+        }
+    </style>
+</head>
+<body>
+    <div id='area' onclick='clicar()' onmouseenter='entrar()' onmouseout='sair()'>
+       Interaja...
+    </div>
+    <script>
+        var a = document.getElementById('area') // Cria a variável 'a' atribuindo a div à ela
+        a.addEventListener('click', clicar) // Quando ouver click em 'a', que foi previamente estabelecido, irá emitir 'clicar'
+        a.addEventListener('mouseenter', entrar) // Quando ouver entrada de mouse em 'a', que foi previamente estabelecido, irá emitir 'entrar'
+        a.addEventListener('mouseout', sair) // Quando ouver saida de mouse em 'a', que foi previamente estabelecido, irá emitir 'sair'
+        function clicar() {
+            a.innerText = 'Clicou!' // Torna o conteúdo da div em 'Clicou' depois da função receber estimulo
+            a.style.background = 'red' // Torna a cor de fundo da div em vermelho depois da função receber estimulo (backgroundcolor não funciona)
+        }
+        function entrar() {
+            a.innerText = 'Entrou!'
+        }
+        function sair() {
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+</html>

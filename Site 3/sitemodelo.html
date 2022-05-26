@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title> 
+    <link rel="stylesheet" href="estilo.css">
+<!-- Ao digitar "link" é recomendado diversos tipos de link. Sendo um deles de css
+O link de css irá vincular um arquivo css externo à esse documento.html. -->
+</head> 
+<body> 
+    <header>
+        <h1>Contador</h1> <!-- Coloca um título-->
+    </header>
+    <section>
+        <div>
+            <p>Início: <input type="number" name="In" id="In"></p> <!-- Caixa de input que só aceita números-->
+            <p>Fim: <input type="number" name="Fi" id="Fi"></p> <!-- Caixa de input que só aceita números-->
+            <p>Passos: <input type="number" name="Pa" id="Pa"></p> <!-- Caixa de input que só aceita números-->
+            <input type="button" value="Contar" onclick="contar()"> <!-- Botão escrito "Contar" que irá disparar para função contar ao clicar-->
+        </div>
+        <div id="res"> <!-- Div vazia que será alterada para o resultado-->
+
+        </div>
+    </section>
+    <footer> <!-- <footer> é o rodapé, como o nome sugere-->
+        <p>&copy;Caio Cascardo</p> <!-- o "&copy;" cria a caractere de copyright, <p> cria um parágrafo.-->
+    </footer>
+    <script src="script.js"></script> <!-- Ao digitar "script" é recomendado o "script:src", que irá 
+    assim como o link, adicionar uma página própria do javascript para ser alterada separadamente-->
+</body>
+</html>
