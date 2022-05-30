@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Tabuada</title> 
+    <link rel="stylesheet" href="estilo.css">
+<!-- Ao digitar "link" é recomendado diversos tipos de link. Sendo um deles de css
+O link de css irá vincular um arquivo css externo à esse documento.html. -->
+</head> 
+<body> 
+    <header>
+        <h1>Gerador de Tabuada</h1>
+    </header>
+    <section>
+        <div>
+            <p>Número: <input type="number" name="numtxt" id="numtxt">
+            <input type="button" value="Gerar Tabuada" onclick="gerar()"></p>
+        </div>
+        <div>
+            <select name="tabuada" id="seltab" size="10">
+
+            </select>
+        </div>
+    </section>
+    <footer> <!-- <footer> é o rodapé, como o nome sugere-->
+        <p>&copy;Caio Cascardo</p> <!-- o "&copy;" cria a caractere de copyright, <p> cria um parágrafo.-->
+    </footer>
+    <script src="script.js"></script> <!-- Ao digitar "script" é recomendado o "script:src", que irá 
+    assim como o link, adicionar uma página própria do javascript para ser alterada separadamente-->
+</body>
+</html>
