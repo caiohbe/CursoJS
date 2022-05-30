@@ -11,17 +11,17 @@ O link de css irá vincular um arquivo css externo à esse documento.html. -->
 </head> 
 <body> 
     <header>
-        <h1>Tratamento de Dados</h1>
+        <h1>Tratamento de Dados</h1> <!-- Cria um título ao programa-->
     </header>
     <section>
         <div>
-            <p>Número (entre 0 e 10): <input type="number" name="numtxt" id="numtxt">
-            <input type="button" value="Adicionar" onclick="adicionar()"></p>
-            <select name="tabela" id="tabela" size="10"></select>
+            <p>Número (entre 0 e 10): <input type="number" name="numtxt" id="numtxt"> <!-- Cria o texto "Número (entre 0 e 10): " e uma caixa de input para números-->
+            <input type="button" value="Adicionar" onclick="adicionar()"></p> <!-- Cria um butão, escrito "Adicionar" que ao clicar irá disparar a chamada "adicionar()"-->
+            <select name="tabela" id="tabela" size="10"></select> <!-- Cria uma tabela a ser preenchida-->
 
-            <p><input type="button" value="Finalizar" onclick="finalizar()"> <input type="button" value="Resetar" onclick="resetar()"></p>
+            <p><input type="button" value="Finalizar" onclick="finalizar()"> <input type="button" value="Resetar" onclick="resetar()"></p> <!-- Cria dois butões, um escrito "Finalizar" e outro escrito "Resetar" que irá disparar suas respectivas chamadas-->
         </div>
-        <div id="res">
+        <div id="res"> <!-- Cria uma div vazia com ID "res" para ser alterada futuramente com DOM-->
 
         </div>
     </section>
