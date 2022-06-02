@@ -54,6 +54,8 @@ function calculate() {
 
         if (Number.parseInt((numlvl - 10) * 10 / 11) != (numlvl - 10) * 10 / 11) {
             minsummed = Number.parseInt((numlvl - 10) * 10 / 11 + 1)
+        } else {
+            minsummed = (numlvl - 10) * 10 / 11
         }
     }
 
@@ -127,7 +129,7 @@ function calculate() {
     } else {
         res.innerHTML += `<h2>Your Sign Summoning Range is:</h2>
         <h3>${minsumm} - ${maxsumm}</h3>For summoning phantoms and
-        <h3>${minsummed} - ${maxsummed}</h3> For being summoned as a phanom
+        <h3>${minsummed} - ${maxsummed}</h3> For being summoned as a phantom
         <h2>Your Invasion Range is:</h2>
         <h3>${mininv} - ${maxinv}</h3>For invading other worlds and
         <h3>${mininved} - ${maxinved}</h3>For being invaded`
